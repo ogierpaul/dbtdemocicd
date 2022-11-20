@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: snowflake_sample_weather
+    description: The Snowflake sample data on the weather
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: WEATHER
+    tables:
+      - name: WEATHER_14_TOTAL
+        description:
+          Daily record of the weather
+        columns:
+          - name: V
+            description: Store the variant
+          - name: T
+            description: Timestamp
+
+models:
+  - name: weather_14_total_limit
+    description: Head 500 rows of the Weather 14 forecase
+    columns:
+      - name: V
+        description: Variant column
+        tests:
+          - not_null
+      - name: T
+        description: Timestamp of snapshot
+        tests:
+          - not_null
+
