@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: level1json
+    description: Expand then Json to level 1 keys
+    columns:
+        - name: V_city
+          description: City Json
+        - name: V_clouds
+          description: Clouds Json
+        - name: V_main
+          description: Main Json
+        - name: V_time
+          description: time Json
+        - name: V_weather
+          description: weather Json
+        - name: V_wind
+          description: wind Json
+        - name: V_rain
+          description: rain Json
+        - name: V_snow
+          description: snow Json
+        - name: T
+          description: Timestamp

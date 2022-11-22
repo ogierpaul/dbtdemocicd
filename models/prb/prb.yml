@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: citiesofinterest
+    description: Subset of city that will be used for the analysis
+    columns:
+      - name: city
+        description: City in Title case
+        tests:
+          - not_null
+          - unique

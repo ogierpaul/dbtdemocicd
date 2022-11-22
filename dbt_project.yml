@@ -34,3 +34,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbtdemocicd:
     materialized: view
+    main:
+       +materialized: table
+    pra:
+      +schema: teama
+    prb:
+      +schema: teamb
